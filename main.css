@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+          box-shadow: 0 0 0px 1000px white inset;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+h1, h2, h3, h4, p {
+  color: #fff;
+}
+
+.container {
+  max-width: 1070px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.main {
+  height: 100%;
+  background: url(img/bg-intro-desktop.png), #ff7a7a;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .main__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .main__wrapper .main__offer {
+  width: 50%;
+}
+
+.main .main__wrapper .main__offer h1 {
+  width: 80%;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.125;
+}
+
+.main .main__wrapper .main__offer p {
+  font-size: 14px;
+  line-height: 1.7;
+  width: 80%;
+}
+
+.main .main__wrapper .main__form {
+  width: 45%;
+}
+
+.main .main__wrapper .main__form .form__banner {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  background-color: #5D54A3;
+  border-radius: 0.4rem;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0px 5px 1px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.main .main__wrapper .main__form .form__banner h2 {
+  line-height: 1.5;
+  font-size: 0.7rem;
+}
+
+.main .main__wrapper .main__form .form__banner h2 span {
+  font-weight: 700;
+}
+
+.main .main__wrapper .main__form form {
+  padding: 35px 30px;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 8px 1px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 8px 1px 0px rgba(0, 0, 0, 0.15);
+}
+
+.main .main__wrapper .main__form form .input__wrapper {
+  position: relative;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .main__wrapper .main__form form .input__wrapper .error {
+  border-color: #ff7a7a;
+}
+
+.main .main__wrapper .main__form form .input__wrapper .error + .error-text {
+  opacity: 1;
+}
+
+.main .main__wrapper .main__form form .input__wrapper .error + .error-text ~ .error-icon {
+  opacity: 1;
+}
+
+.main .main__wrapper .main__form form .input__wrapper .error-text {
+  text-align: right;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  color: #ff7a7a;
+  font-size: 10px;
+  top: 77%;
+  line-height: 1.3;
+  right: 1%;
+  font-weight: 600;
+  font-style: italic;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.main .main__wrapper .main__form form .input__wrapper .error-icon {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  display: block;
+  position: absolute;
+  top: 16%;
+  right: 5%;
+  opacity: 0;
+  -webkit-user-drag: none;
+}
+
+.main .main__wrapper .main__form form .input__wrapper input {
+  width: 100% !important;
+  font-family: inherit;
+  width: auto;
+  padding: 12px 17px;
+  margin-bottom: 20px;
+  border: 2px solid #DEDEDE;
+  border-radius: 0.2rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.main .main__wrapper .main__form form .input__wrapper input::-webkit-input-placeholder {
+  font-family: 'Poppins';
+  color: #98989A;
+  font-weight: 600;
+}
+
+.main .main__wrapper .main__form form .input__wrapper input:-ms-input-placeholder {
+  font-family: 'Poppins';
+  color: #98989A;
+  font-weight: 600;
+}
+
+.main .main__wrapper .main__form form .input__wrapper input::-ms-input-placeholder {
+  font-family: 'Poppins';
+  color: #98989A;
+  font-weight: 600;
+}
+
+.main .main__wrapper .main__form form .input__wrapper input::placeholder {
+  font-family: 'Poppins';
+  color: #98989A;
+  font-weight: 600;
+}
+
+.main .main__wrapper .main__form form .input__wrapper input:focus {
+  outline: none !important;
+  border: 2px solid #605A7E;
+}
+
+.main .main__wrapper .main__form form button {
+  margin-top: 20px;
+  display: block;
+  border-radius: 0.2rem;
+  width: 90%;
+  cursor: pointer;
+  border: none;
+  padding: 12px 0;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  color: #fff;
+  border-bottom: 3px solid #3EB37F;
+  background-color: #38cc8c;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.main .main__wrapper .main__form form button:hover {
+  opacity: 0.85;
+}
+
+.main .main__wrapper .main__form form .form__terms {
+  text-align: center;
+  margin-top: 15px;
+  color: #C1BFCA;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.main .main__wrapper .main__form form .form__terms a {
+  font-weight: bold;
+  color: #ff7a7a;
+  text-decoration: none;
+}
+
+.main .main__wrapper .main__form form .form__terms a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  body {
+    height: initial;
+  }
+  body .main {
+    display: block;
+  }
+  body .main .main__wrapper {
+    padding: 40px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .main .main__wrapper .main__offer {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  body .main .main__wrapper .main__offer h1, body .main .main__wrapper .main__offer p {
+    width: auto;
+  }
+  body .main .main__wrapper .main__form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 568px) {
+  body .main .main__wrapper .main__offer {
+    width: 80%;
+  }
+  body .main .main__wrapper .main__form {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
